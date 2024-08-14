@@ -1,0 +1,195 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/Logo.png">
+    <title>For You</title>
+
+    <!-- Reset -->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Code+Pro&display=swap" rel="stylesheet">    
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+    <!-- Leaflet JavaScript file -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+    <!-- Application CSS -->
+    <link rel="stylesheet" href="css/app.css"></link>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    
+</head>
+<body>
+    <header>
+        <!-- I am setting the class of container for the logo -->
+        <div class="container"> 
+            <!-- setting the class of this section as flex too -->
+            <div class="flex">
+                <!-- this is to make sure when the logo is hit, it directs to Home.html -->
+                <a href="Home.html">
+                    <!-- this is the image tag with the width of 80 -->
+                    <img src="assets/images/Logo.png" width="80" alt="">
+                </a>
+                <!-- the header of the web page -->
+                <h3>A Website Just For You</h3>
+                <nav>
+                    <ul>
+                        <!-- when clicking on gallery and games, it will direct user to album.html
+                         and puzzle.html (puzzle isn't done so there's nothing there for now) -->
+                        <li><a href="Album.html">Gallery</a></li>
+                        <li><a href="puzzle.html">Games</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+        </div>
+    </header>
+<!-- setting the div ID as map, also where map section starts -->
+    <div id="map"></div>
+    <!-- the style section for map -->
+    <style>
+        /* setting the map style, with the height og 900px and having 5 rem margin 
+        on both left and right */
+        #map { 
+            height: 900px; 
+            margin-left: 5rem;
+            margin-right: 5rem;
+        }
+        
+    </style>
+<!-- where JS starts -->
+    <script>
+        // I am setting the view point of the map as Vancouver when the page loads
+    var map = L.map('map').setView([49.2827, -123.1207], 13);
+
+        // Adds a tile layer from OpenStreetMap to 
+        // the Leaflet map and includes attribution to the OpenStreetMap contributors.
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    // this code creates a marker at the coordinate that is inside the parameters, and binds
+    // a popup with the text "Lonsdale Quay Market" that pops up automatically when clicked
+    L.marker([49.3086, -123.0701], 13).addTo(map)
+    .bindPopup('Lonsdale Quay Market.')
+    .openPopup();
+
+    //refer to line 83 and 84, same but coordinates and the popup names are different
+    L.marker([49.2830, -123.1223], 13).addTo(map)
+    .bindPopup('Your favorite restaurant.')
+    .openPopup();
+    
+    //refer to line 83 and 84, same but coordinates and the popup names are different
+    L.marker([49.2870, -123.1154], 13).addTo(map)
+    .bindPopup('Christmas Market 2023.')
+    .openPopup();
+    
+    //refer to line 83 and 84, same but coordinates and the popup names are different
+    L.marker([49.2623, -123.2460], 13).addTo(map)
+    .bindPopup('UBC Japanese Garden.')
+    .openPopup();
+    
+    //refer to line 83 and 84, same but coordinates and the popup names are different
+    L.marker([49.24222, -123.11500], 13).addTo(map)
+    .bindPopup('Queen Elizabeth Park.')
+    .openPopup();
+    
+    //refer to line 83 and 84, same but coordinates and the popup names are different
+    L.marker([48.4261, -123.3656], 13).addTo(map)
+    .bindPopup('My old Victoria apartment.')
+    .openPopup();
+    
+    //refer to line 83 and 84, same but coordinates and the popup names are different
+    L.marker([49.1900, -122.8400], 13).addTo(map)
+    .bindPopup('Central City Fun Park.')
+    .openPopup();
+    
+    //refer to line 83 and 84, same but coordinates and the popup names are different
+    L.marker([49.2305, -122.9757], 13).addTo(map)
+    .bindPopup('Ki Cafe.')
+    .openPopup();
+    
+    //refer to line 83 and 84, same but coordinates and the popup names are different
+    L.marker([49.2710, -123.1550], 13).addTo(map)
+    .bindPopup('Sea glass hunting.')
+    .openPopup();
+    
+    //refer to line 83 and 84, same but coordinates and the popup names are different
+    L.marker([49.3336, -123.1138], 13).addTo(map)
+    .bindPopup('Capilano Suspension Bridge.')
+    .openPopup();
+    
+    //refer to line 83 and 84, same but coordinates and the popup names are different
+    L.marker([49.1314, -123.1679], 13).addTo(map)
+    .bindPopup('Richmond Sunflowe Festival.')
+    .openPopup();
+    
+    //refer to line 83 and 84, same but coordinates and the popup names are different
+    L.marker([49.2826, -123.1207], 13).addTo(map)
+    .bindPopup('Our usual area.')
+    .openPopup();
+    
+    //refer to line 83 and 84, same but coordinates and the popup names are different
+    L.marker([49.2657, -123.1816], 13).addTo(map)
+    .bindPopup('Our favorite hightea place.')
+    .openPopup();
+    
+    //refer to line 83 and 84, same but coordinates and the popup names are different
+    L.marker([49.2884, -123.1390], 13).addTo(map)
+    .bindPopup('Fireworks 2023.')
+    .openPopup();
+    
+    //refer to line 83 and 84, same but coordinates and the popup names are different
+    L.marker([49.1724, -123.1391], 13).addTo(map)
+    .bindPopup('Our favorite claw machine place.')
+    .openPopup();
+
+    //refer to line 83 and 84, same but coordinates and the popup names are different
+    L.marker([49.1671, -123.1371], 13).addTo(map)
+    .bindPopup('Where we first met.')
+    .openPopup();
+    
+    </script>
+<footer>
+    <!-- setting the class container for the footer -->
+    <div class="container">
+        
+        <!-- setting the class flex for the footer -->
+        <div class="flex">
+            <!-- same as line 41 -->
+            <a href="Home.html">
+                <!-- same as line 43 -->
+                <img src="assets/images/Logo.png" width="80" alt="">
+            </a>
+            
+            <nav>
+                
+                <ul>
+                    <!-- same as line 50 and 51
+                     there is no quitting option here because I only
+                     attached it to home.html, kind of forcing my 
+                     partner to read through the whole thing before quitting -->
+                    <li><a href="Album.html">Gallery</a></li>
+                    <li><a href="puzzle.html">Games</a></li>
+                </ul>
+
+            </nav>
+        </div>
+
+    </div>
+
+</footer>
+</body>
+</html>

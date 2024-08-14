@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/Logo.png">
+    <title>For You</title>
+
+    <!-- Reset -->
+    <link rel="stylesheet" href="css/reset.css">
+    
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Code+Pro&display=swap" rel="stylesheet">    
+
+
+    <!-- Application CSS -->
+    <link rel="stylesheet" href="css/lock.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- this is basically the same thing as home page but the contents are
+     slightly different. In summary, I am giving h1 the class of wrapper so 
+     it can have the wrapper in stylesheet applied. Next, I am setting the 
+     class of input box for the password section and that it is required to
+     have the password if you want access to the rest of the file. Lastly, 
+     I have made a submit button called Log In with the hint of the password
+     inside the P element. BTW the hint IS the password. -->
+    <div class="wrapper">
+        <form action="">
+            <h1>Unlock</h1>
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+                <i class='bx bx-lock-alt'></i>
+            </div>
+            <button type="submit" class="btn">Log In</button>
+            <p>Hint:123456789</p>
+        </form>
+    </div>
+
+    <script>
+       const correctPassword = "123456789";
+
+// Function to check the password
+// in summary, if the password inputed is 123456789, you will log in
+// if not, there will be an alert that tells you the password is incorrect
+// if the password is correct, you will be directed to home.html
+function checkPassword() {
+    // Get the user's password input
+    const userPassword = prompt("Enter your password:");
+
+    if (userPassword === correctPassword) {
+        // Redirect to Home.html if the password is correct
+        window.location.href = "Home.html";
+    } else {
+        // Alert the user if the password is incorrect
+        alert("Incorrect password. You can't log in.");
+    }
+}
+
+// Call the function to check the password when the script loads
+window.onload = checkPassword;
+    </script>
+</body>
+</html>

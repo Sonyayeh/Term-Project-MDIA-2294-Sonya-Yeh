@@ -1,0 +1,158 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/Logo.png">
+    <title>For You</title>
+
+    <!-- Reset -->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Code+Pro&display=swap" rel="stylesheet">    
+
+    <!-- tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+
+
+    <!-- Application CSS -->
+    <link rel="stylesheet" href="css/app.css"></link>
+    <!-- I used tailwind here for an easier adjustment of the slick slider -->
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    
+</head>
+<!-- this whole section is the same as home.html but with different content
+ this page has 3 elements, the header photo, large cringy paragraph, also plz
+ don't judge me with how cringe I wrote the paragraph, and a slick slider at the 
+ bottom of the page. And of course, having the essential elements like the header
+ and the footer -->
+<body>
+    <header>
+        <div class="container">
+            <div class="flex">
+                <a href="Home.html">
+                    <img src="assets/images/Logo.png" width="80" alt="">
+                </a>
+                <h3 class="text-xl">A Website Just For You</h3>
+                <nav>
+                    <ul>
+                        <li><a href="Album.html">Gallery</a></li>
+                        <li><a href="puzzle.html">Games</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+                <div class="posts__header">
+                    <h2 class="text-5xl">Appreciation Paragraph</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flex">
+            <img src="assets/images/sunflower.jpg">
+        </div>
+        <div class="container">
+            <div class="flex m-5">
+                <p>Keep in mind, I would never write a paragraph for anyone that is outside of assignments and for family.
+                    You already know how it was with my ex, the complete opposite of you. I do not like to compare people
+                    but because he is so ass it's hard not to. I never imagined myself to date people again because honestly
+                    it always crushes my self confidence and mental health. For some odd reason, you help me with my self esteem
+                    and encouraged me to get professional help regarding my depression and everthing else. It is weird to get 
+                    support from people that are not my family or friends. You were a complete stranger to me. The more I 
+                    interact with you, the more I noticed how kind-hearted and messed up you are, in a good way. They say 
+                    if your partner has similar personality, there will be no issues with anything. Even though we met on the 
+                    most random platform, I do believe you are the right fit for me. Even though I felt like I knew you well
+                    enough, I still learn so much about you everyday. I learned you having a dog personality and loves dogs,
+                    especially corgis and goldens. You love arcades, and always goes crazy whenever we go crane gaming. We 
+                    found out we love gaming, Nintendo and Kirby. We love it so much you turned my room into a Kirby museum.
+                    My life has gotten more fun and exciting ever since you entered my life. I'd never imagine myself being 
+                    this hopeful and looking forward to experience life with someone. You completely changed me, and I am 
+                    grateful for that.
+                </p>
+            </div>
+        </div>
+    </div> 
+
+    <section>
+        <!-- this is the slick slider section and consists of 8 pictures -->
+         <!-- this slick slider is inside of a container grid that has 12 columns but shrinks
+          into 4 columed grid -->
+        <div class="container grid grid-cols-4 gap-8 px-4 py-8 md:py-12 lg:py-16 md:grid-cols-12 md:gap-6 justify-center mx-auto">
+            <div class="col-span-4 sm:col-span-4 md:col-span-12 col-span-12">         
+                <div class="slide">
+                    <!-- since this is inside of the slider, I added class of slide for 
+                     every image just so they are in the same class -->
+                    <img src="assets/images/Foret.JPG" alt="image 1" class="slide">
+                    <img src="assets/images/cherry.jpg" alt="image 2" class="slide">
+                    <img src="assets/images/First.jpg" alt="image 3" class="slide">
+                    <img src="assets/images/garden.jpg" alt="image 4" class="slide">
+                    <img src="assets/images/summer.jpg" alt="image 5" class="slide">
+                    <img src="assets/images/Flower.jpg" alt="img 6" class="slide">
+                    <img src="assets/images/sunflower.jpg" alt="img 7" class="slide">
+                    <img src="assets/images/Valentine.jpg" alt="img 8" class="slide">
+                </div>
+            </div>
+        </div>
+    </section>
+   <!-- this is the section where I attach the script source -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- slick slider javascript -->
+     <!-- in summary: I attached the slider and hid the dots on the bottom,
+      enables infinite looping of sliders,
+      set the transition speed between slides to 500 milliseconds,
+      changed the animation to fade effect, 
+      make sure it auto plays, apply a linear easing function for transition,
+      enables automatic slide transitions and 
+      set the speed of the autoplay slide to 1500 milliseconds or 1.5 seconds -->
+    <script type="text/javascript">
+       $('.slide').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 1500,
+        });
+	
+    </script>
+
+
+<footer>
+<!-- this footer section is the same thing as Home.html, please refer to that file
+ the only difference is there is no quit button and it is only available on home.html -->
+    <div class="container">
+        <div class="flex">
+            <a href="Home.html">
+                <img src="assets/images/Logo.png" width="80" alt="">
+            </a>
+            
+            <nav>
+                
+                <ul>
+                    <li><a href="Album.html">Gallery</a></li>
+                    <li><a href="puzzle.html">Games</a></li>
+                </ul>
+
+            </nav>
+        </div>
+
+    </div>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,87 @@
+:root {
+    --heading-font: 'Archivo Black', sans-serif;
+    --body-font: 'Source Code Pro', monospace;
+    --dark-gray: #444648;
+    --taro: #ac81d9;
+    --pink: #fa91bf;
+    --blue: #40d4eb;
+    --orange: #d99352;
+    --green: #18ac62;
+    --white: #ffffff;
+    --spacing-sm: 8px;
+    --spacing: 16px;
+    --spacing-lg: 32px;
+    --spacing-xl: 46px;
+    --spacing-2xl: 64px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+  
+}
+
+
+
+body {
+    font-family: var(--body-font);
+    font-weight: 400;
+    background-color: var(--white);
+    color: var(--pink);
+    line-height: 1.25;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+
+  #menu {
+    position: relative;
+    list-style-type: none;
+    padding-left: 5px;
+    z-index: 1000;
+    /* 1 */
+    display: inline-block;
+    text-align: center;
+  }
+
+  #menu li {
+    margin: 2px;
+    padding: 4px 10px;
+    border-radius: 5px;
+    background-color: #ffff80;
+  }
+
+  #menu li:hover {
+    background-color: #ffDD60;
+  }
+
+  #forPuzzle {
+    position: absolute;
+    width: 95vw;
+    height: 95vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+  }
+
+  .polypiece {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+  }
+
+  .moving {
+    transition-property: top, left;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+  }
+
+  .gameCanvas {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+  }

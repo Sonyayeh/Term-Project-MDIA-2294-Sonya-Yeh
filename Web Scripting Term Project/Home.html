@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/Logo.png">
+    <title>For You</title>
+
+    <!-- Reset -->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Code+Pro&display=swap" rel="stylesheet">    
+
+    <!-- Add Background Video CSS -->
+
+    <link rel="stylesheet" href="css/bg-video/jquery.background-video.js">
+
+    <!-- Add Flickity CSS -->
+     <link rel="stylesheet" href="css/flickity/flickity.min.css">
+
+    <!-- Application CSS -->
+    <link rel="stylesheet" href="css/app.css"></link>
+    
+</head>
+<body>
+    
+    <header>
+          <!-- I am setting the class of container for the logo -->
+        <div class="container">
+            <!-- setting the class of this section as flex too -->
+            <div class="flex">
+                <!-- this is to make sure when the logo is hit, it directs to Home.html -->
+                <img src="assets/images/Logo.png" width="80" alt="">
+                <!-- the header of the web page -->
+                <h3>A Website Just For You</h3>
+                <nav>
+                    
+                    <ul>
+                         <!-- when clicking on gallery and games, it will direct user to album.html
+                         and puzzle.html (puzzle isn't done so there's nothing there for now) -->
+                        <li><a href="Album.html">Gallery</a></li>
+                        <li><a href="puzzle.html">Games</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- I am defining this section with an ID of join and class of days -->
+        <section class="days" id="join">
+             <!-- setting the class container for the footer -->
+            <div class="container">
+                 <!-- setting the class grid for the footer so it stays in a grid -->
+                <div class="grid">
+                    <!-- the div class name is called days__content -->
+                    <div class="days__content">
+                        <!-- the section's top text line -->
+                        <h2>As of Today:</h2>
+                        <!-- the section's bottom text line -->
+                        <p>You still stink</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <!-- This code creates a section element with the class posts 
+         and the ID posts for grouping and styling content related to posts. -->
+        <section class="posts" id="posts">
+            <!-- This code creates a `div` element with the class `container`,
+              which is typically used to group and style content within a layout. -->
+            <div class="container">
+                <!-- This code creates a `div` element with the class `posts__header`, 
+                 typically used to style and organize the header section of a posts-related content. -->
+                <div class="posts__header">
+                    <!-- This code creates a div element with the class grid, which is typically 
+                     used to apply grid-based layout styles for arranging content. -->
+                    <div class="grid">
+                        <!-- This code creates a `div` element with the class `posts__header-content`, used to style 
+                         and structure the content within the header of a posts section. -->
+                        <div class="posts__header-content">
+                            <!-- section with text in h2 heading element -->
+                            <h2>Thank You</h2>
+                            <!-- section with text in P element -->
+                            <p>Thank you for putting up with me for all this time.
+                                I know I am not the best person to get along with because of my moodswings and mental issues,
+                                but you stick around anyways. I want to show my appreciation through doing something I am the worst at: coding.
+                                I want to show you what we've done over the years, but my teacher will see this first and probably find this cringe.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- the rest is similar to the section above but instead of
+                 posts, this has the class of banner -->
+        <section class="banner" id="intro">
+            <!-- creates a div with the element of the jquery-background-video-wrapper class -->
+            <div class="jquery-background-video-wrapper">
+
+                <!-- Add jQuery Background Video HTML Elements-->
+                <div class="jquery-background-video-wrapper">
+                    <!-- setting the class of banner video and have it set to an autoplay, muted and
+                     play in a loop and sourcing the video -->
+                    <video class=" banner-video
+                    my-background-video jquery-background-video" loop autoplay muted playsinline poster="assets/images/Valentine.jpg">
+                        <source src="assets/video/Valentines Day.mp4" type="video/mp4">
+                        <source src="path/to/video.webm" type="video/webm">
+                        <source src="path/to/video.ogv" type="video/ogg">
+                    </video>
+                </div>
+
+            </div>
+
+        </section>
+                <!-- same thing as above but the class is different -->
+                <div class="posts__header">
+                    <!-- refer to the first section of the code -->
+                    <h2> Memorable Moments: </h2>
+                </div>
+                <!-- giving the class name of carousel -->
+                <div class="carousel">
+                    <!-- giving the class of carousel-cell -->
+                    <div class="carousel-cell">
+                        <!-- given the class of card, with the style of the selected image, first.jpg -->
+                        <div class="card" style="background-image: url('assets/images/First.jpg');">
+                            <!-- giving this following section a class of card__content -->
+                            <div class="card__content">
+                                <!-- the contents inside the card -->
+                                <h3>Our Gallery</h3>
+                                <!-- on click of the button, read more, directs user to album.html -->
+                                <a href="Album.html">
+                                    <button id="firstBtn">Read More</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- same thing as above, but the destinations are different -->
+                     <!-- for example, this one directs people to texts.html -->
+                        <div class="carousel-cell">
+                            <div class="card" style="background-image: url('assets/images/Garden.jpg');">
+                                <div class="card__content">
+                                    <h3>Appreciation Babbling</h3>
+                                    <a href="texts.html">
+                                    <button id="ubcBtn">Read More</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- this one directs people to plans.html -->
+                         <!-- this page is not done yet so there's nothing on there for now btw -->
+                    <div class="carousel-cell">
+                        <div class="card" style="background-image: url('assets/images/Flower.jpg');">
+                            <div class="card__content">
+                                <h3>Summer Break Plans</h3>
+                                <a href="plans.html">
+                                <button id="CherryBtn">Read More</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- this one directs people to croissant.html -->
+                     <!-- this page is also not done yet, but it will have a grid/rank of some
+                      of the best croissants we had in Greater Vancouver area -->
+                    <div class="carousel-cell">
+                       <div class="card" style="background-image: url('assets/images/Foret.JPG');">
+                           <div class="card__content">
+                               <h3>Croissant Hunting</h3>
+                               <a href="croissant.html">
+                                   <button id="CroissantBtn">Read More</button>
+                               </a>
+                           </div>
+                       </div>
+                   </div>
+
+        </section>
+
+        <!-- this is a new section for map -->
+        <!-- it has the class of list__content --> 
+        <section class="list" id="paragraph">
+            <div class="container">
+                <div class="grid">
+                    <div class="list__content">
+                        <h2> Places We've Been To </h2>
+                        <!-- directs you to map.html when you click on view map.  -->
+                            <a href="map.html">
+                                <button>View Map</button>
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+<!-- this is basically the same as header, but also has some extra bits -->
+        <div class="container">
+
+            <div class="flex">
+                <a href="Home.html">
+                    <img src="assets/images/Logo.png" width="80" alt="">
+                </a>
+                <nav>
+                    <!-- here are the bottom 3 buttons, that are album, puzzle and a quit option -->
+                     <!-- when clicked on each section, you will be directed to the designated a href link -->
+                    <ul>
+                        <li><a href="Album.html">Gallery</a></li>
+                        <li><a href="puzzle.html">Games</a></li>
+                        <!-- but clicking this one will make you quit the whole thing -->
+                         <!-- you will need to input the password to access this page again -->
+                          <!-- the password is 123456789 btw! -->
+                        <li><a href="lock.html">Quit</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Add jQuery -->
+    <script src="js/bg-video/jquery.min.js"></script>
+
+    <!-- Add jQuery Background Video-->
+    <script src="js/bg-video/jquery.background-video.js"></script>
+    <!-- Add Flickity JS -->
+     <script src="js/flickity/flickity.pkgd.min.js"></script>
+
+    <!-- Add Parallax JS -->
+     <script src="js/parallax/parallax.min.js"></script>
+    
+    <!-- Add Application JS -->
+     <script src="js/app.js"></script>
+     <script>
+        $(function( ){
+            // Configures a background video 
+            // with no fade-in, no pause/play buttons, and no automatic pause.
+            $(".banner-video").bgVideo({
+                fadeIn: 0,
+                showPausePlay: false,
+                pauseAfter: 0
+            });
+            // Applies a parallax effect with an image from assets/images/summer.jpg.
+            $(".days").parallax({
+                imageSrc: "assets/images/summer.jpg"
+            });
+            // Sets up a carousel with Flickity, allowing cells to be contained, 
+            // aligned to the left, wrapped around, with autoplay and no page dots.
+            $(".carousel").flickity({
+                contain: true, 
+                cellAlign: "left",
+                wrapAroung: true,
+                pageDots: false,
+                autoPlay: true,
+            });
+
+
+        });
+     </script>
+     
+<!-- Adds the Masonry layout library, which helps in creating a dynamic, grid-based layout. -->
+<script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+<!-- Adds the ImagesLoaded library, which ensures that images are fully loaded before triggering layout or other scripts. -->
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<!-- Includes your custom JavaScript file, which likely contains additional scripts or functionality for your site. -->
+<script src="js/app.js"></script>
+
+</body>
+</html>
